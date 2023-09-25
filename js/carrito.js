@@ -9,6 +9,7 @@ let botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
 const botonVaciar = document.querySelector("#carrito-acciones-vaciar");
 const contenedorTotal = document.querySelector("#total");
 const botonComprar = document.querySelector("#carrito-acciones-comprar");
+const footerCopy = document.getElementById('footer-copy');
 
 
 function cargarProductosCarrito() {
@@ -140,3 +141,7 @@ function comprarCarrito() {
     contenedorCarritoComprado.classList.remove("disabled");
 
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    footerCopy.textContent = `Mauricio Benavidez ${new Date().getFullYear()}`;
+});

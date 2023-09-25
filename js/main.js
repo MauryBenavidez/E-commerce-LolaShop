@@ -13,6 +13,7 @@ const botonesCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo-principal");
 let botonesAgregar = document.querySelectorAll(".producto-agregar");
 const numerito = document.querySelector("#numerito");
+const footerCopy = document.getElementById('footer-copy');
 
 
 botonesCategorias.forEach(boton => boton.addEventListener("click", () => {
@@ -124,3 +125,7 @@ function actualizarNumerito() {
     let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    footerCopy.textContent = `Mauricio Benavidez ${new Date().getFullYear()}`;
+});
